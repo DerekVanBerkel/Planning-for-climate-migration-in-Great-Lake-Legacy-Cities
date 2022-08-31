@@ -401,8 +401,8 @@ library(ggspatial)</code></pre>
 <h4>Data Download</h4>
 <p>Both the FEMA National Risk Index <a href="https://hazards.fema.gov/nri/" class="uri">https://hazards.fema.gov/nri/</a> ranks and The CDC Social Vulnerability Index (SVI) is freely available from these websites. All tract level FEMA data can be downloaded from here <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/index.html" class="uri">https://www.atsdr.cdc.gov/placeandhealth/svi/index.html</a> <a href="https://hazards.fema.gov/nri/Content/StaticDocuments/DataDownload//NRI_Shapefile_CensusTracts/NRI_Shapefile_CensusTracts.zip" class="uri">https://hazards.fema.gov/nri/Content/StaticDocuments/DataDownload//NRI_Shapefile_CensusTracts/NRI_Shapefile_CensusTracts.zip</a> and the CDC data <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html" class="uri">https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html</a></p>
 <pre class="r"><code>### Once you have downloaded the data, simply alter the directory to location of where the data is stored on your computer
-risk &lt;- st_read(&quot;C:/Data/GLISA/NRI_Shapefile_CensusTracts/NRI_Shapefile_CensusTracts.shp&quot;)</code></pre>
-<pre><code>## Reading layer `NRI_Shapefile_CensusTracts&#39; from data source `C:\Data\GLISA\NRI_Shapefile_CensusTracts\NRI_Shapefile_CensusTracts.shp&#39; using driver `ESRI Shapefile&#39;
+risk &lt;- st_read(&quot;NRI_Shapefile_CensusTracts.shp&quot;)</code></pre>
+<pre><code>## Reading layer `NRI_Shapefile_CensusTracts&#39; from data source `NRI_Shapefile_CensusTracts.shp&#39; using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 72739 features and 368 fields
 ## geometry type:  MULTIPOLYGON
 ## dimension:      XY
