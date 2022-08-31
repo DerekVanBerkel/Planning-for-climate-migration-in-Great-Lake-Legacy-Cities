@@ -408,7 +408,7 @@ risk &lt;- st_read(&quot;C:/Data/GLISA/NRI_Shapefile_CensusTracts/NRI_Shapefile_
 ## dimension:      XY
 ## bbox:           xmin: -19942590 ymin: 2144435 xmax: 20012850 ymax: 11537130
 ## projected CRS:  WGS 84 / Pseudo-Mercator</code></pre>
-<pre class="r"><code>socialvuln &lt;- st_read(&quot;C:/Data/GLISA/SVI2018_US/SVI2018_US_tract.shp&quot;)</code></pre>
+<pre class="r"><code>socialvuln &lt;- st_read(&quot;SVI2018_US_tract.shp&quot;)</code></pre>
 <pre><code>## Reading layer `SVI2018_US_tract&#39; from data source `C:\Data\GLISA\SVI2018_US\SVI2018_US_tract.shp&#39; using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 72837 features and 126 fields
 ## geometry type:  MULTIPOLYGON
@@ -418,16 +418,16 @@ risk &lt;- st_read(&quot;C:/Data/GLISA/NRI_Shapefile_CensusTracts/NRI_Shapefile_
 <pre class="r"><code>### We also need a few data layers for making figure 2. These are not mandatory for the map, but
 ### can be downloaded easily e.g., https://www.glc.org/greatlakesgis
 ### We need shapefiles for the lakes 
-gl &lt;- st_transform(st_read(&quot;C:/Users/dbvanber/Downloads/GreatLakes.shp&quot;),4326)</code></pre>
-<pre><code>## Reading layer `GreatLakes&#39; from data source `C:\Users\dbvanber\Downloads\GreatLakes.shp&#39; using driver `ESRI Shapefile&#39;
+gl &lt;- st_transform(st_read(&quot;GreatLakes.shp&quot;),4326)</code></pre>
+<pre><code>## Reading layer `GreatLakes&#39; from data source `GreatLakes.shp&#39; using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 1 feature and 11 fields
 ## geometry type:  POLYGON
 ## dimension:      XY
 ## bbox:           xmin: -92.19876 ymin: 41.37988 xmax: -70.4547 ymax: 49.01076
 ## geographic CRS: WGS 84</code></pre>
 <pre class="r"><code>### We also need the boundaries of the States 
-gl_s&lt;- st_transform(st_read(&quot;C:/Users/dbvanber/Downloads/GL_states.shp&quot;),4326)</code></pre>
-<pre><code>## Reading layer `GL_states&#39; from data source `C:\Users\dbvanber\Downloads\GL_states.shp&#39; using driver `ESRI Shapefile&#39;
+gl_s&lt;- st_transform(st_read(&quot;GL_states.shp&quot;),4326)</code></pre>
+<pre><code>## Reading layer `GL_states&#39; from data source `GL_states.shp&#39; using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 8 features and 17 fields
 ## geometry type:  MULTIPOLYGON
 ## dimension:      XY
