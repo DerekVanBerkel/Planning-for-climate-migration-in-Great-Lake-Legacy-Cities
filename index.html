@@ -465,7 +465,7 @@ mutate( GLISAcat =  ifelse( STATEFIPS != &quot;26&quot; &amp; STATEFIPS != &quot
 <pre class="r"><code>### National Risk Index for Natural Hazards (FEMA)
 Fema &lt;- contRisk %&gt;%
   filter(STATEABBRV %in% conus_states) %&gt;%
-  ggplot(aes(x=reorder(STATE.x, RISK_SCORE, na.rm = TRUE), y = RISK_SCORE, fill = GLISAcat)) +
+  ggplot(aes(x=reorder(STATE, RISK_SCORE, na.rm = TRUE), y = RISK_SCORE, fill = GLISAcat)) +
   geom_boxplot() +
   #facet_wrap(~GLISAcat,ncol = 2) +
   ylab(&quot;FEMA National Risk&quot;) +
@@ -479,9 +479,8 @@ Fema &lt;- contRisk %&gt;%
 ### CDC/ATSDR dataset
 Social &lt;- contRisk %&gt;%
   filter(STATEABBRV %in% conus_states) %&gt;%
-  ggplot(aes(x=reorder(STATE.x, RISK_SCORE, na.rm = TRUE), y = RPL_THEMES, fill = GLISAcat)) +
+  ggplot(aes(x=reorder(STATE, RISK_SCORE, na.rm = TRUE), y = RPL_THEMES, fill = GLISAcat)) +
   geom_boxplot() +
-  #facet_wrap(~GLISAcat,ncol = 2) +
   xlab(&quot;Census tract per CONUS States&quot;) + ylab(&quot;CDC/ATSDR SVI&quot;) +
   scale_fill_manual(values=c( &quot;#E69F00&quot;, &quot;#999999&quot;))+
   theme_classic()+
